@@ -1,0 +1,3 @@
+id: "20200507105119.34938730"
+project-name: goibm
+stack: docker.io/appsody/go-modules:0.1
