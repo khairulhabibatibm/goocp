@@ -21,7 +21,7 @@ func GetAllTodos(c *gin.Context) {
 	var todo []Models.Todo
 	err := Models.GetAllTodos(&todo)
 	if err != nil {
-		c.AbortWithStatus(http.StatusNotFound)
+		c.AbortWithStatus(http.StatusNoContent)
 	} else {
 		c.JSON(http.StatusOK, todo)
 	}
