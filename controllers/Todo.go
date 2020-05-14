@@ -16,3 +16,13 @@ func GetTodos(c *gin.Context) {
 		c.JSON(http.StatusOK, todo)
 	}
 }
+
+func GetAllTodos(c *gin.Context) {
+	var todo []Models.Todo
+	err := Models.GetAllTodos(&todo)
+	if err != nil {
+		c.AbortWithStatus(http.StatusNotFound)
+	} else {
+		c.JSON(http.StatusOK, todo)
+	}
+}

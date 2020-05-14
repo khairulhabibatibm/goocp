@@ -11,6 +11,7 @@ func SetupRouter() *gin.Engine {
 	v1 := r.Group("/api")
 	{
 		v1.GET("master", controllers.GetTodos)
+		v1.GET("all", controllers.GetAllTodos)
 	}
 
 	return r
